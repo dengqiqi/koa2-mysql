@@ -1,0 +1,14 @@
+{% extends './layout.html' %}
+
+{% block title %}i音乐-后台管理系统{% endblock %}
+{% block links %}
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+{% endblock %}
+{% block content %}
+	<div class="content clearFix">
+		{% include "./menu.html" %}
+		<div class="main">
+			{% block operate %}{% endblock %}
+		</div>
+	</div>
+{% endblock %}

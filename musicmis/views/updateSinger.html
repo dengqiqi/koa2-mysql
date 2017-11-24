@@ -1,0 +1,20 @@
+{% extends './common-layout.html' %}
+
+{% block operate %}
+	<h3>新增歌手信息</h3>
+    <form action="/singer/edit" method="post">
+        <input type="hidden" name="id" value="{{ singer[0].id }}">
+		<input type="text" name="name" placeholder="歌手姓名" value="{{ singer[0].name }}"><br/>
+		<input type="text" name="englishName" placeholder="英文名" value="{{ singer[0].englishName }}"><br/>
+		<select name="guoji" id="">
+			<option value="中国">中国</option>
+			<option value="韩国">韩国</option>
+			<option value="英国">英国</option>
+			<option value="美国">美国</option>
+			<option value="新加坡">新加坡</option>
+		</select><br/>
+		<input type="text" name="chushengdi" placeholder="出生地" value="{{ singer[0].chushengdi }}"><br/>
+		<input type="text" name="job" placeholder="职业" value="{{ singer[0].job }}"><br/>
+		<button type="submit">修改</button>
+	</form>
+{% endblock %}

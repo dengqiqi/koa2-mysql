@@ -1,0 +1,44 @@
+{% extends './common-layout.html' %}
+
+{% block operate %}
+	<h3>新增歌手信息</h3>
+	<form action="/singer/add" method="post">
+		<input type="text" name="name" placeholder="歌手姓名"><br/>
+		<input type="text" name="englishName" placeholder="英文名"><br/>
+		<select name="guoji" id="">
+			<option value="中国">中国</option>
+			<option value="韩国">韩国</option>
+			<option value="英国">英国</option>
+			<option value="美国">美国</option>
+			<option value="新加坡">新加坡</option>
+		</select><br/>
+		<input type="text" name="chushengdi" placeholder="出生地"><br/>
+		<input type="text" name="job" placeholder="职业"><br/>
+		<button type="submit">添加</button>
+	</form>
+	<h3>歌手列表</h3>
+	<table id="singerList">
+		<thead>
+			<tr>
+				<th>歌手姓名</th>
+				<th>英文名</th>
+				<th>国籍</th>
+				<th>出生地</th>
+				<th>职业</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for singer in singers %}
+				<tr>
+					<td>{{ singer.name }}</td>
+					<td>{{ singer.englishName }}</td>
+					<td>{{ singer.guoji }}</td>
+					<td>{{ singer.chushengdi }}</td>
+					<td>{{ singer.job }}</td>
+					<td><a href="/singer/edit/{{ singer.id }}">编辑</a>|<a href="/singer/del/{{ singer.id }}">删除</a></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

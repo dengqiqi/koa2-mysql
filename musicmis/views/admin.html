@@ -1,0 +1,29 @@
+{% extends './common-layout.html' %}
+
+{% block operate %}
+	<h3>新增管理员</h3>
+    <form action="/admin/add" method="post">
+        <label for="">姓名</label><input type="text" name="adminName" id="" /><br/>
+        <label for="">密码</label><input type="password" name="adminPwd" id="" /><br/>
+        <input type="submit" value="添加" />
+    </form>
+    <h3>管理员列表</h3>
+	<table id="adminList">
+		<thead>
+			<tr>
+				<th>管理员姓名</th>
+				<th>密码</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for admin in admins %}
+				<tr>
+					<td>{{ admin.adminName }}</td>
+					<td>{{ admin.adminPwd }}</td>
+					<td><a href="/admin/edit/{{ admin.id }}">编辑</a>|<a href="/admin/del/{{ admin.id }}">删除</a></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

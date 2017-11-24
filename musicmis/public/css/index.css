@@ -1,0 +1,17 @@
+.menu{
+	width: 150px;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.menu ul{
+	list-style: none;
+}
+.main{
+	float: left;
+}
+.clearFix:after{
+	content: '';
+	display: block;
+	clear: both;
+}

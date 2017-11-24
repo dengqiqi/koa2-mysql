@@ -1,0 +1,11 @@
+{% extends './common-layout.html' %}
+
+{% block operate %}
+	<h3>新增歌手信息</h3>
+    <form action="/admin/edit" method="post">
+        <input type="hidden" name="id" value="{{ admin[0].id }}">
+		<input type="text" name="adminName" placeholder="管理员姓名" value="{{ admin[0].adminName }}"><br/>
+		<input type="text" name="adminPwd" placeholder="密码" value="{{ admin[0].adminPwd }}"><br/>
+		<button type="submit">修改</button>
+	</form>
+{% endblock %}
