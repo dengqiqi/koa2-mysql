@@ -10,7 +10,7 @@ SingerDb.prototype.querySinger = function(){
 }
 
 SingerDb.prototype.addSinger = function(singer){
-    let sql = `insert into singer (name,englishname,guoji,chushengdi,job) values ('${singer.name}','${singer.englishName}','${singer.guoji}','${singer.chushengdi}','${singer.job}')`;
+    let sql = `insert into singer (name,englishname,guoji,chushengdi,job,picName) values ('${singer.name}','${singer.englishName}','${singer.guoji}','${singer.chushengdi}','${singer.job}','${singer.picName}')`;
     return execSql(sql).then(function(r){
         console.log(r);
     });

@@ -1,0 +1,17 @@
+form{
+    width: 300px;
+    margin-left: 75px;
+}
+label{
+    display: inline-block;
+    width: 50px;
+    margin: 10px;
+}
+h3{
+    margin-left: 150px;
+}
+.btn{
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 10px;
+}

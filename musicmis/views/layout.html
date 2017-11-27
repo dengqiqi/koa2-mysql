@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>{% block title %}i音乐{% endblock %}</title>
 	<style type="text/css">
-		.head{
+		* {
+			margin: 0;
+			padding: 0;
+			/* color: #eee; */
+		}
+
+		body {
+			background: #555;
+		}
+
+		.head {
 			height: 100px;
 			background: #DEE2E2;
 		}
-		.foot{
-			margin-top: 50px;
+
+		h1 {
 			height: 100px;
-			background: #D4D6D3;
+			line-height: 100px;
+			text-align: center;
+			color: #C02323;
 		}
 	</style>
 	{% block links %}{% endblock %}
 </head>
+
 <body>
-	<div class="head">{{ '欢迎' + admin.adminName}}</div>
+	<div class="head">
+		<h1>后台管理系统</h1>
+	</div>
 	{% block content %}{% endblock %}
-	<div class="foot"></div>
 </body>
+
 </html>

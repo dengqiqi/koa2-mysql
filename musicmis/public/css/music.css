@@ -1,0 +1,18 @@
+.item{
+    margin: 10px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+}
+
+form{
+    width: 390px;
+    margin: auto;
+}
+
+.btn button{
+    margin-left: 100px;
+    width: 100px;
+    height: 20px;
+}

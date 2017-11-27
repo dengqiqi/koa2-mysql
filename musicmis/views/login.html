@@ -2,16 +2,16 @@
 
 {% block title %}i音乐-后台管理系统{% endblock %}
 {% block links %}
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/login.css">
 {% endblock %}
 {% block content %}
     <p style="color:red;">{{ error }}</p>
-    <div style="width:400px;margin:0 auto;">
+    <div style="width:400px;margin:50px auto;">
         <h3>管理员登录</h3>
         <form action="/admin/login" method="post">
             <label for="">姓名</label><input type="text" name="adminName" id="" /><br/>
             <label for="">密码</label><input type="password" name="adminPwd" id="" /><br/>
-            <input type="submit" value="登录" />
+            <input class="btn" type="submit" value="登录" />
         </form>
     </div>
 {% endblock %}

@@ -1,0 +1,18 @@
+.wrap{
+    float: left;
+    width: 800px;
+    margin: 30px auto;
+}
+.contain{
+    margin: auto;
+    width: 600px;
+}
+input{
+    margin: 10px;
+}
+select{
+    margin-left: 10px;
+}
+td{
+    padding-right: 20px;
+}

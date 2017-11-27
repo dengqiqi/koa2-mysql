@@ -1,7 +1,27 @@
 {% extends './layout.html' %}
 
-{% block title %}i音乐-歌手信息维护{% endblock %}
+{% block title %}i音乐-单曲信息维护{% endblock %}
+{% block links %}<link rel="stylesheet" href="/css/music.css">{% endblock %}
 
 {% block content %}
-
+    <div style="width:400px;margin:50px auto;">
+        <form action="/music/add" method="post" enctype="multipart/form-data">
+            <div class="item"><label for="">歌曲名称</label><input type="text" name="title" id=""></div>
+            <div class="item">
+                <label for="">歌手</label>
+                <select name="singerid" id="geshou">
+                    
+                    {% for singer in singers %}
+                      <option value="{{ singer.id }}">{{ singer.name }}</option>
+                    {% endfor %}		
+                    
+                </select>
+            </div>
+            <div class="item"><label for="">歌曲封面</label><input type="file" name="picfile" id=""></div>
+            <div class="item"><label for="">歌词文件</label><input type="file" name="lrcfile" id=""></div>
+            <div class="item"><label for="">歌曲文件</label><input type="file" name="audiofile" id=""></div>
+            <div class="item"><label for="">歌曲时长</label><input type="time" name="time" id=""></div>
+            <div class="item btn"><button type="submit">提交</button></div>
+        </form>
+    </div>
 {% endblock %}
